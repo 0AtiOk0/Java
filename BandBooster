@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class BandBooster 
+{
+	//Initialize scanner
+	//Declare Instance Data
+	private String name;
+	private int boxesSold;
+	private int boxesIn;
+	
+	//Constructor
+	public BandBooster (String nameBand, int boxesIn)
+	{
+		name=nameBand;
+		boxesSold=boxesIn;
+	}
+	//Main Method
+	public static void main(String[] args) 
+	{
+		int numBoxes = 0;
+		int totBoxes = 0;
+		Scanner scan = new Scanner(System.in);
+
+		//Create 2 BandBooster Objects
+		
+		//Object 1
+		BandBooster band1 = new BandBooster("Sour Patch Kids", 12);
+		
+		//Object 2
+		BandBooster band2 = new BandBooster("Swedish Fish", 15);
+		System.out.println(band1);
+		System.out.println(band2);
+		
+		//3-Week Loop : Band 1 
+		for (int x=1; x<4; x++)
+		{
+			System.out.println("Enter the number of boxes sold by "+band1.getName()+" this week: ");
+			numBoxes=scan.nextInt();
+			totBoxes=totBoxes+numBoxes;
+		}
+		System.out.println(totBoxes);
+		
+		//3-Week Loop : Band 2
+		for (int x=1; x<4; x++)
+		{
+			System.out.println("Enter the number of boxes sold by "+band2.getName()+" this week: ");
+			numBoxes=scan.nextInt();
+			totBoxes=totBoxes+numBoxes;
+		}
+		System.out.println(totBoxes);
+	}
+
+
+	
